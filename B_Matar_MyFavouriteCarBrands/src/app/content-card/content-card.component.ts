@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { ContentList } from '../helper-files/content-list';
-import { Content } from '../helper-files/content-interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-content-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './content-card.component.html',
   styleUrl: './content-card.component.scss'
+  
 })
+
+
 export class ContentCardComponent {
   contentList: ContentList = new ContentList();
 
@@ -18,7 +21,7 @@ export class ContentCardComponent {
       title: 'Mercedes-Benz',
       description: 'Mercedes-Benz is a German global automobile marque and a division of Daimler AG. Mercedes-Benz is known for luxury vehicles, vans, trucks, buses, coaches and ambulances. The headquarters is in Stuttgart, Baden-Württemberg. The name first appeared in 1926 under Daimler-Benz.',
       creator: 'Karl Benz',
-      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Mercedes-Benz_logo_%282018%29.svg/1200px-Mercedes-Benz_logo_%282018%29.svg.png',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Mercedes-Benz_Star_2022.svg/640px-Mercedes-Benz_Star_2022.svg.png',
       type: 'Automobile',
       tags: ['Mercedes-Benz', 'Mercedes', 'Benz', 'Daimler AG', 'Stuttgart', 'Baden-Württemberg', 'Karl Benz']
     });
@@ -36,12 +39,11 @@ export class ContentCardComponent {
       title: 'Audi',
       description: 'Audi AG is a German automobile manufacturer that designs, engineers, produces, markets and distributes luxury vehicles. Audi is a member of the Volkswagen Group and has its roots at Ingolstadt, Bavaria, Germany. Audi-branded vehicles are produced in nine production facilities worldwide.',
       creator: 'August Horch',
-      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Audi_AG_logo.svg/1200px-Audi_AG_logo.svg.png',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/640px-Audi-Logo_2016.svg.png',
       type: 'Automobile',
       tags: ['Audi', 'Audi AG', 'Ingolstadt', 'Bavaria', 'August Horch']
 
   });
   }
-  ngOnInit(): void {}
 }
 

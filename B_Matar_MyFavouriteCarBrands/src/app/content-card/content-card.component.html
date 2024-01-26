@@ -1,6 +1,3 @@
-<p>content-card works!</p>
-
-<div *ngFor="let content of contentList.getContentList(); let i = index">
-    <!-- Utilize the getHTML function to display content -->
-    <div [innerHTML]="contentList.getHTML(i)"></div>
-  </div>
+<div *ngFor="let content of contentList.getContentList(); let i = index" class="content-card">
+  <div [innerHTML]="contentList.getHTML(i)"></div>
+</div>
