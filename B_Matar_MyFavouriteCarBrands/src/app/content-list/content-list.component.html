@@ -1,0 +1,6 @@
+<!-- content-list.component.html -->
+<div *ngFor="let contentItem of contentList; let i = index">
+  <app-content-card 
+    [content]="contentItem">
+  </app-content-card>
+</div>
