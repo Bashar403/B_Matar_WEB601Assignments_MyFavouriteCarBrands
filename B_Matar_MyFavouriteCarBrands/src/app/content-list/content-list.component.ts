@@ -18,7 +18,7 @@ export class ContentListComponent {
       title: 'BMW',
       description: 'Bayerische Motoren Werke AG, commonly referred to as BMW, is a German multinational corporation which produces luxury vehicles and motorcycles.',
       creator: 'Bashar Matar',
-      imgURL: 'https://www.bmw.com/content/dam/bmw/common/all-models/1-series/5-door/2019/navigation/bmw-1-series-modelfinder.jpg',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png',
       type: 'Car',
       tags: ['BMW', 'German', 'Luxury', 'Car']
     },
@@ -27,7 +27,7 @@ export class ContentListComponent {
       title: 'Mercedes-Benz',
       description: 'Mercedes-Benz is a German global automobile marque and a division of Daimler AG. The brand is known for luxury vehicles, buses, coaches, and trucks.',
       creator: 'Bashar Matar',
-      imgURL: 'https://www.mercedes-benz.com/en/vehicles/passenger-cars/a-class/saloon/_jcr_content/root/slider/sliderchilditems/slideritem/image.MQ6.12.20190725112648.jpeg',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Mercedes-Benz_Star_2022.svg/640px-Mercedes-Benz_Star_2022.svg.png',
       type: 'Car',
       tags: ['Mercedes-Benz', 'German', 'Luxury', 'Car']
     },
@@ -36,7 +36,7 @@ export class ContentListComponent {
       title: 'Audi',
       description: 'Audi AG is a German automobile manufacturer that designs, engineers, produces, markets and distributes luxury vehicles.',
       creator: 'Bashar Matar',
-      imgURL: 'https://www.audi.com/content/dam/gbp2/experience-audi/models-and-technology/production-models/2020/audi-a3-sportback/my20-a3-sportback-1080x1080.jpg',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/640px-Audi-Logo_2016.svg.png',
       type: 'Car',
       tags: ['Audi', 'German', 'Luxury', 'Car']
     },
@@ -45,7 +45,7 @@ export class ContentListComponent {
       title: 'Toyota',
       description: 'Toyota Motor Corporation is a Japanese multinational automotive manufacturer headquartered in Toyota, Aichi, Japan.',
       creator: 'Bashar Matar',
-      imgURL: 'https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2021/camry/1J9/1.png?bg=fff&fm=webp&w=930',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Toyota_EU.svg',
       type: 'Car',
       tags: ['Toyota', 'Japanese', 'Car']
     },
@@ -54,7 +54,7 @@ export class ContentListComponent {
       title: 'Honda',
       description: 'Honda Motor Co., Ltd. is a Japanese public multinational conglomerate corporation known as a manufacturer of automobiles, motorcycles, and power equipment.',
       creator: 'Bashar Matar',
-      imgURL: 'https://www.honda.com/content/dam/honda-cars/2021/civic-sedan/overview/2021-civic-sedan-overview.jpg',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Honda.svg',
       type: 'Car',
       tags: ['Honda', 'Japanese', 'Car']
     },
@@ -63,7 +63,7 @@ export class ContentListComponent {
       title: 'Ford',
       description: 'The Ford Motor Company, commonly known as Ford, is an American multinational automaker that has its main headquarters in Dearborn, Michigan, a suburb of Detroit.',
       creator: 'Bashar Matar',
-      imgURL: 'https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/suvs-crossovers/bronco-sport/2021/bronco-sport/gallery/bronco-sport-gallery-1.jpg',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Ford_Logo_1976_Print_ver_v2.svg',
       type: 'Car',
       tags: ['Ford', 'American', 'Car']
     }

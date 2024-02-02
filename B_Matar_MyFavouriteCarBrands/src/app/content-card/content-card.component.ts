@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ContentCardComponent {
   @Input() content!: Content;
+  @Input() isFirst: boolean = false;
 
   onClickImage() {
     console.log(`ID: ${this.content.id}, Title: ${this.content.title}`);
