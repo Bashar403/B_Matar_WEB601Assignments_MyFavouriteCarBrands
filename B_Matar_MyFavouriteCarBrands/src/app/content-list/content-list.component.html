@@ -1,7 +1,28 @@
 <!-- content-list.component.html -->
-<div *ngFor="let contentItem of contentList; let i = index">
-  <app-content-card 
-    [content]="contentItem" 
-    [isFirst]="i === 0">
-  </app-content-card>
+<div class="content-container">
+  <div class="search-container">
+    <!-- Search input field -->
+    <input type="text" placeholder="Search by title" [(ngModel)]="searchTitle">
+    <!-- Search button -->
+    <button (click)="searchContent()">Search</button>
+    <!-- Search result message -->
+    <p [style.color]="searchResultColor" class="search-result">{{ searchResult }}</p>
+  </div>
+
+  <div class="test">
+    <div class="content-section">
+      <h3>Car</h3>
+      <div class="content-items">
+        <app-content-card *ngFor="let contentItem of contentList | typeFilter:'Car'" [content]="contentItem"></app-content-card>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3>Tech</h3>
+      <div class="content-items">
+        <app-content-card *ngFor="let contentItem of contentList | typeFilter:'Tech'" [content]="contentItem"></app-content-card>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { CommonModule } from '@angular/common';
 import { ContentCardComponent } from '../content-card/content-card.component';
+import { TypeFilterPipe } from '../type-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent],
+  imports: [CommonModule, ContentCardComponent, TypeFilterPipe,FormsModule ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -66,6 +68,52 @@ export class ContentListComponent {
       imgURL: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Ford_Logo_1976_Print_ver_v2.svg',
       type: 'Car',
       tags: ['Ford', 'American', 'Car']
+    },
+    {
+    id:7,
+    title: 'Chevrolet',
+    description: 'Chevrolet, colloquially referred to as Chevy and formally the Chevrolet Division of General Motors Company, is an American automobile division of the American manufacturer General Motors.',
+    creator: 'Bashar Matar',
+    imgURL: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Chevrolet_simple_logo.png',
+    type: 'Car',
+    tags: ['Chevrolet', 'American', 'Car']
+    },
+    {
+      id: 8,
+      title: 'Ferrari',
+      description: 'Ferrari S.p.A. is an Italian luxury sports car manufacturer based in Maranello, Italy.',
+      creator: 'Bashar Matar',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/DSC00458_%287614921264%29.jpg/640px-DSC00458_%287614921264%29.jpg',
+      type: 'Car',
+      tags: ['Ferrari', 'Italian', 'Luxury', 'Car']
+    },
+    {
+      id: 9,
+      title: 'Apple',
+      description: 'Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.',
+      creator: 'Bashar Matar',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Apple-icon.svg/640px-Apple-icon.svg.png',
+      type: 'Tech',
+      tags: ['Apple', 'American', 'Tech']
+    },
+    {
+      id: 10,
+      title: 'Samsung',
+      description: 'Samsung is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul.',
+      creator: 'Bashar Matar',
+      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Png-transparent-samsung-logo-samsung-galaxy-a8-2018-logo-samsung-electronics-arrow-sketch-company-text-label.png/640px-Png-transparent-samsung-logo-samsung-galaxy-a8-2018-logo-samsung-electronics-arrow-sketch-company-text-label.png',
+      type: 'Tech',
+      tags: ['Samsung', 'South Korean', 'Tech']
     }
+
   ];
+  searchTitle: string = '';
+  searchResult: string = '';
+  searchResultColor: string = '';
+
+  searchContent() {
+    const found = this.contentList.some(content => content.title === this.searchTitle);
+    this.searchResult = found ? 'Content item exists' : 'Content item does not exist';
+    this.searchResultColor = found ? 'green' : 'red';
+  }
 }

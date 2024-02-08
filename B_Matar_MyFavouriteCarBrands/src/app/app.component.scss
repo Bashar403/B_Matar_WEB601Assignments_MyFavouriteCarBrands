@@ -1,8 +1,0 @@
-// make so all the grids have the same hieght
-
-app-content-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-    grid-gap: 20px;
-    
-}
