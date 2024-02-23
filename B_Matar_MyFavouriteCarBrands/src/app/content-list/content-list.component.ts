@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, TypeFilterPipe,FormsModule ],
+  
+  imports: [CommonModule, ContentCardComponent, TypeFilterPipe,FormsModule, ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -20,7 +21,6 @@ export class ContentListComponent {
       title: 'BMW',
       description: 'Bayerische Motoren Werke AG, commonly referred to as BMW, is a German multinational corporation which produces luxury vehicles and motorcycles.',
       creator: 'Bashar Matar',
-      imgURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png',
       type: 'Car',
       tags: ['BMW', 'German', 'Luxury', 'Car']
     },
