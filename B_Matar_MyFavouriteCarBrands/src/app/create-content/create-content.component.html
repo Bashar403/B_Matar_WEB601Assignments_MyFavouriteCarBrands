@@ -1,0 +1,18 @@
+<!-- src/app/create-content/create-content.component.html -->
+<h1>Create Content</h1>
+<label>ID:</label>
+<input [(ngModel)]="id" name="id" type="number"><br>
+<label>Title:</label>
+<input [(ngModel)]="title" name="title"><br>
+<label>Description:</label>
+<input [(ngModel)]="description" name="description"><br>
+<label>Creator:</label>
+<input [(ngModel)]="creator" name="creator"><br>
+<label>Image URL:</label>
+<input [(ngModel)]="imgURL" name="imgURL"><br>
+<label>Type:</label>
+<input [(ngModel)]="type" name="type"><br>
+<label>Tags (separate by comma):</label>
+<input [(ngModel)]="tags" name="tags"><br>
+<button (click)="insert()">Submit</button>
+

@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ContentCardComponent } from '../content-card/content-card.component';
 import { TypeFilterPipe } from '../type-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { CreateContentComponent } from '../create-content/create-content.component';
 
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
   
-  imports: [CommonModule, ContentCardComponent, TypeFilterPipe,FormsModule, ],
+  imports: [CommonModule, ContentCardComponent, TypeFilterPipe,FormsModule, CreateContentComponent ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -115,5 +116,13 @@ export class ContentListComponent {
     const found = this.contentList.some(content => content.title === this.searchTitle);
     this.searchResult = found ? 'Content item exists' : 'Content item does not exist';
     this.searchResultColor = found ? 'green' : 'red';
+  }
+  errorMessage: string = '';
+
+  constructor() {}
+
+  insertContentEvent(item: Content) {
+    this.contentList.push(item);
+    console.log(`Content added: ${item.title}`);
   }
 }

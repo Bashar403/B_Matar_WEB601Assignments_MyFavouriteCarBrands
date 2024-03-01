@@ -1,4 +1,9 @@
 <!-- content-list.component.html -->
+<app-create-content (insertContentEvent)="insertContentEvent($event)"></app-create-content>
+<div *ngFor="let content of contentList">
+  <h3>{{ content.title }}</h3>
+</div>
+
 <div class="content-container">
   <div class="search-container">
     <!-- Search input field -->
