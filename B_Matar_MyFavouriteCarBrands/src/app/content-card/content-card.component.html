@@ -1,3 +1,14 @@
-<div *ngFor="let content of contentList.getContentList(); let i = index" class="content-card">
-  <div [innerHTML]="contentList.getHTML(i)"></div>
+<!-- content-card.component.html -->
+<div class="content-card" [ngClass]="{'first-card': isFirst}" *ngIf="content" [ngClass]="content.type" >
+  <h2>{{ content.title }}</h2>
+  <img *ngIf="content.imgURL; else defaultImage" [src]="content.imgURL" alt="{{ content.title }}" (click)="onClickImage()">
+  <ng-template #defaultImage>
+    <img src="assets/default-image.webp" alt="Default Image" (click)="onClickImage()">
+  </ng-template>
+  <p>{{ content.description }}</p>
+  <p>Creator: {{ content.creator }}</p>
+  <p *ngIf="content.type" appHoveraffect type="underline">Type: {{ content.type }}</p>
+  <ul>
+    <li *ngFor="let tag of content.tags" appHoveraffect type="bold"> {{tag}}</li>
+  </ul>
 </div>

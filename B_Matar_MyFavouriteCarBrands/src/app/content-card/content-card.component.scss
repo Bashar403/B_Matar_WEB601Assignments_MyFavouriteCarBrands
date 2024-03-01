@@ -1,0 +1,53 @@
+// content-card.component.scss
+
+// Define border width and color variables
+$content-card-border: 1px solid #ccc; 
+$first-card-border: 2px solid black; 
+
+// Define common spacing variable
+$common-spacing: 10px;
+
+// Styles for content cards
+.content-card {
+    border: $content-card-border; // Apply default border
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    img {
+      width: 100px;
+      height: 50px;
+      margin-top: 10px;
+      cursor: pointer; 
+    }
+
+    h2, p {
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.5; 
+    }
+    
+    // Apply common spacing to paragraphs and headings
+    p, h2 {
+      margin: $common-spacing 0;
+    }
+    
+    &.Car {
+      background-color: lightblue; 
+    }
+    
+    &.Tech {
+      background-color: lightgreen; 
+    }
+    
+    &.OtherType {
+      background-color: lightyellow; 
+
+    &.first-card {
+      border: $first-card-border; 
+    }
+  }
+}
