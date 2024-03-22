@@ -5,21 +5,28 @@ import { ContentCardComponent } from '../content-card/content-card.component';
 import { TypeFilterPipe } from '../type-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { CarService } from '../helper-files/car.service'; // Update the path as necessary
+import { ModifyContentComponent } from '../modify-content/modify-content.component';
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, TypeFilterPipe, FormsModule],
+  imports: [CommonModule, ContentCardComponent, TypeFilterPipe, FormsModule, ModifyContentComponent  ],
   templateUrl: './content-list.component.html',
-  styleUrls: ['./content-list.component.scss'] // Notice the correction here from 'styleUrl' to 'styleUrls'
+  styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent implements OnInit {
+export class ContentListComponent {
   contentList: Content[] = [];
   searchTitle: string = '';
   searchResult: string = '';
   searchResultColor: string = '';
 
   constructor(private carService: CarService) {}
+  contentAdded(newContent: Content): void {
+    // Assuming you want to add the new content to the list displayed by this component
+    this.contentList.push(newContent);
+      //refresh the list from the server if needed
+      this.getContentList();
+  }
 
   ngOnInit() {
     this.getContentList();

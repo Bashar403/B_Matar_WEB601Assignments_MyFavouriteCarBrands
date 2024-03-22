@@ -11,7 +11,7 @@ import { CarService } from './helper-files/car.service'; // Adjust path as neces
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ContentListComponent, CommonModule, ContentCardComponent,  ],
+  imports: [ContentListComponent, CommonModule, ContentCardComponent,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
