@@ -7,11 +7,11 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-modify-content',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Ensure CommonModule and FormsModule are imported
+  imports: [CommonModule, FormsModule],
   templateUrl: './modify-content.component.html',
   styleUrls: ['./modify-content.component.scss']
 })
-export class ModifyContentComponent  {
+export class ModifyContentComponent {
   newContent: Omit<Content, 'id'> = {
     title: '',
     description: '',
@@ -25,21 +25,26 @@ export class ModifyContentComponent  {
 
   constructor(private carService: CarService) {}
 
-  addContent(): void {
-    // Assuming addContent in CarService is implemented to handle 'id' properly
-    this.carService.addContent(this.newContent as Content).subscribe(
-      (content) => {
-        this.contentAdded.emit(content);
-        // Reset the form
-        this.newContent = {
-          title: '',
-          description: '',
-          creator: '',
-          imgURL: '',
-          type: '',
-          tags: []
-        };
-      }
-    );
+  // Inside ModifyContentComponent
+addContent(): void {
+  this.carService.addContent(this.newContent as Content).subscribe(
+    (content) => {
+      this.contentAdded.emit(content); // Make sure this line is executed
+      this.resetForm();
+    },
+    error => console.error('Error adding content:', error)
+  );
+}
+
+
+  resetForm(): void {
+    this.newContent = {
+      title: '',
+      description: '',
+      creator: '',
+      imgURL: '',
+      type: '',
+      tags: []
+    };
   }
 }
