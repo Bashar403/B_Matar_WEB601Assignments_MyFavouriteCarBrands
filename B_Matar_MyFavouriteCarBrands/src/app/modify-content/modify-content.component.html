@@ -1,7 +1,22 @@
 <div>
-    <input [(ngModel)]="newContent.title" placeholder="Title" />
-    <input [(ngModel)]="newContent.description" placeholder="Description" />
-    <!-- Add input fields for other properties as needed -->
-    <button (click)="addContent()">Add Content</button>
-  </div>
-  
+  <input [(ngModel)]="newContent.title" placeholder="Title" />
+  <input [(ngModel)]="newContent.description" placeholder="Description" />
+  <input [(ngModel)]="newContent.creator" placeholder="Creator" />
+  <input [(ngModel)]="newContent.imgURL" placeholder="Image URL" />
+  <input [(ngModel)]="newContent.type" placeholder="Type" />
+  <input [(ngModel)]="newContent.tags" placeholder="Tags" />
+  <!-- Add input fields for other properties as needed -->
+  <button (click)="addContent()">Add Content</button>
+</div>
+
+
+
+<!-- export interface Content {
+id : number | null;
+title : string;
+description : string;
+creator : string;
+imgURL? : string;
+type? : string;
+tags? : string[];
+} -->
