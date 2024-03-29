@@ -1,13 +1,47 @@
-<div>
+<!-- <div>
   <input [(ngModel)]="newContent.title" placeholder="Title" />
   <input [(ngModel)]="newContent.description" placeholder="Description" />
   <input [(ngModel)]="newContent.creator" placeholder="Creator" />
   <input [(ngModel)]="newContent.imgURL" placeholder="Image URL" />
   <input [(ngModel)]="newContent.type" placeholder="Type" />
   <input [(ngModel)]="newContent.tags" placeholder="Tags" />
-  <!-- Add input fields for other properties as needed -->
+   Add input fields for other properties as needed
   <button (click)="addContent()">Add Content</button>
-</div>
+</div> -->
+<!-- <div>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="newContent.title">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="newContent.description">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Creator</mat-label>
+    <input matInput [(ngModel)]="newContent.creator">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput [(ngModel)]="newContent.imgURL">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <input matInput [(ngModel)]="newContent.type">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Tags</mat-label>
+    <input matInput [(ngModel)]="newContent.tags">
+  </mat-form-field>
+  <button mat-raised-button (click)="addContent()">Add Content</button>
+</div> -->
+<button mat-raised-button 
+        matTooltip="Click to add new content"
+        (click)="openAddContentDialog()">Add New Content</button><br>
+<br>
+
+
+
 
 
 

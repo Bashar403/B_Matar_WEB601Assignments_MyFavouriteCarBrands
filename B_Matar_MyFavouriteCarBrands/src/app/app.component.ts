@@ -5,13 +5,15 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { CommonModule } from '@angular/common';
 import { Content } from './helper-files/content-interface';
 import { CarService } from './helper-files/car.service'; // Adjust path as necessary
+import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ContentListComponent, CommonModule, ContentCardComponent,],
+  imports: [ContentListComponent, CommonModule, ContentCardComponent, AddContentDialogComponent, MatSnackBarModule ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

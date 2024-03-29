@@ -8,12 +8,17 @@
 <div class="content-container">
   <div class="search-container">
     <!-- Search input field -->
-    <input type="text" placeholder="Search by title" [(ngModel)]="searchTitle">
+    <mat-form-field appearance="fill">
+      <mat-label>Search by title</mat-label>
+      <input matInput type="text" [(ngModel)]="searchTitle">
+    </mat-form-field>
     <!-- Search button -->
-    <button (click)="searchContent()">Search</button>
+    <button mat-raised-button (click)="searchContent()">Search</button>
     <!-- Search result message -->
     <p [style.color]="searchResultColor" class="search-result">{{ searchResult }}</p>
   </div>
+    
+  
 
   <div class="test">
     <div class="content-section">

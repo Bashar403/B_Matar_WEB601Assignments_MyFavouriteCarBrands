@@ -6,11 +6,14 @@ import { TypeFilterPipe } from '../type-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { CarService } from '../helper-files/car.service'; // Update the path as necessary
 import { ModifyContentComponent } from '../modify-content/modify-content.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, TypeFilterPipe, FormsModule, ModifyContentComponent  ],
+  imports: [CommonModule, ContentCardComponent, TypeFilterPipe, FormsModule, ModifyContentComponent, MatFormFieldModule, MatInputModule, MatButtonModule],
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })

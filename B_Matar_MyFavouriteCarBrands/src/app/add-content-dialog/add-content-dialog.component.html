@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Add New Content</h1>
+<div mat-dialog-content>
+  <!-- Form fields here -->
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="newContent.title">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="newContent.description">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Creator</mat-label>
+    <input matInput [(ngModel)]="newContent.creator">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput [(ngModel)]="newContent.imgURL">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <input matInput [(ngModel)]="newContent.type">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Tags</mat-label>
+    <input matInput [(ngModel)]="newContent.tags">
+  </mat-form-field>
+  <!-- More fields as necessary -->
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+<button mat-button (click)="onSubmit()">Add</button>
+<mat-slide-toggle>Enable feature</mat-slide-toggle>
+
+  
+</div>
